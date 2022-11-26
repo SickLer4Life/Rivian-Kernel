@@ -40,7 +40,7 @@ static inline uint16_t make_vgaentry(char c, uint8_t color) {
 void terminal_initialize(void) {
 	terminal_row = 0;
 	terminal_column = 0;
-	terminal_color = make_color(COLOR_LIGHT_GREEN, COLOR_BLACK);
+	terminal_color = make_color(COLOR_WHITE, COLOR_BLACK);
 	terminal_buffer = VGA_MEMORY;
 	size_t y;
 	for ( y = 0; y < VGA_HEIGHT; y++ ) {
