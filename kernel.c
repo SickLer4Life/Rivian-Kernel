@@ -10,9 +10,30 @@ void kernel_early(void) {
 int main(void) {
 	char *buff;
 	strcpy(&buff[strlen(buff)], "");
-	printf("<$> Starting Kernel\n");
-    printf("<$> Starting Shell\n");
-    printf("Booting into KemieBSD beta.\n");
+	printf("               ,        ,\n");
+	printf("              /(        )`\n");
+	printf("              | \___   /| \n");
+	printf("              /- _  `-/  '\n");
+	printf("             (/\/ \ \   /\ \n");
+	printf("             / /   | `    \ \n");
+	printf("             O O   ) /    |\n");
+	printf("             `-^--'`&lt;  '\n");
+	printf("            (_.)  _  )   / \n");
+	printf("             `.___/`    / \n");
+	printf("               `-----' / \n");
+	printf("  &lt;----.     __ / __   \ \n");
+	printf("  &lt;----|====O)))==) \) /====\n");
+	printf("  &lt;----'    `--' `.__,' \ \n");
+	printf("               |        | \n");
+	printf("                \       / \n");
+	printf("           ______( (_  / \ \n");
+	printf("  (FK)   ,'  ,-----'   |    \n");
+	printf("         `--{__________)          \n");
+	
+	printf("\n");
+	printf("\n");
+	printf("Kemie Terminal Emulator\n");
+	
 	printprompt();
 	while (1) {
 		uint8_t byte;
