@@ -1,7 +1,7 @@
 # KemieOS
 A simple operating system which implements a UNIX-like kernel. 
-Help make this project something big.
-![KemieOS](https://ibb.co/K5dd0Sy)
+> Help make this project something big.
+![KemieOS](./kemie.jpg)
 
 ## Run With Qemu
 qemu-system-i386 kemieOS.iso
