@@ -2,6 +2,10 @@
 #include "kernel/io.h"
 #include "kernel/kbd.h"
 #include "libc/include/string.h"
+#include "stdint.h"
+#include "stddef.h"
+#include "stdarg.h"
+#include "kernel/tty.h"
 
 void kernel_early(void) {
 	terminal_initialize();
@@ -10,29 +14,8 @@ void kernel_early(void) {
 int main(void) {
 	char *buff;
 	strcpy(&buff[strlen(buff)], "");
-	printf("               ,        ,\n");
-	printf("              /(        )`\n");
-	printf("              | \___   /| \n");
-	printf("              /- _  `-/  '\n");
-	printf("             (/\/ \ \   /\ \n");
-	printf("             / /   | `    \ \n");
-	printf("             O O   ) /    |\n");
-	printf("             `-^--'`&lt;  '\n");
-	printf("            (_.)  _  )   / \n");
-	printf("             `.___/`    / \n");
-	printf("               `-----' / \n");
-	printf("  &lt;----.     __ / __   \ \n");
-	printf("  &lt;----|====O)))==) \) /====\n");
-	printf("  &lt;----'    `--' `.__,' \ \n");
-	printf("               |        | \n");
-	printf("                \       / \n");
-	printf("           ______( (_  / \ \n");
-	printf("  (FK)   ,'  ,-----'   |    \n");
-	printf("         `--{__________)          \n");
-	
+	printf("Welcome To The AmianOS Terminal Emulator\n");
 	printf("\n");
-	printf("\n");
-	printf("Kemie Terminal Emulator\n");
 	
 	printprompt();
 	while (1) {
@@ -43,7 +26,14 @@ int main(void) {
 					printf("\nGoodbye!");
 				}
 				else if (strlen(buff) > 0 && strcmp(buff, "clear") == 0){
-					printf("\ncleared!");
+					int clear_buff = 1;
+					while(clear_buff < 100){
+						printf("\n");
+						clear_buff ++;
+					}
+				}
+				else if (strlen(buff) > 0 && strcmp(buff, "clr -r") == 0){
+					
 				}
 				else {
 					printf("\nKemie command not found");
