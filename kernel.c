@@ -11,12 +11,28 @@ void kernel_early(void) {
 	terminal_initialize();
 }
 
+void wipe_screen(void) {
+	int wipe_num = 1;
+	while(wipe_num < 100){
+		printf("\n");
+		wipe_num ++;
+	}
+}
+
+void delay(int i){
+	if(i == 0)
+	return;
+	delay(i-10);
+}
+
 int main(void) {
 	char *buff;
 	strcpy(&buff[strlen(buff)], "");
-	printf("Welcome To The AmianOS Terminal Emulator\n");
+	printf("Welcome To BochsOne\n");
+	printf("Kernel Start:");
 	printf("\n");
-	
+	delay(20);
+	void wipe_screen(void);
 	printprompt();
 	while (1) {
 		uint8_t byte;
@@ -27,16 +43,21 @@ int main(void) {
 				}
 				else if (strlen(buff) > 0 && strcmp(buff, "clear") == 0){
 					int clear_buff = 1;
+
 					while(clear_buff < 100){
 						printf("\n");
 						clear_buff ++;
 					}
 				}
-				else if (strlen(buff) > 0 && strcmp(buff, "clr -r") == 0){
-					
+				else if (strlen(buff) > 0 && strcmp(buff, "boot") == 0){
+					printf("\nBoot >> ");
+					//Run Boot seq.
+				}
+				else if (strlen(buff) > 0 && strcmp(buff, "login") == 0){
+
 				}
 				else {
-					printf("\nKemie command not found");
+					printf("\nBochsOne command not found");
 				}
 				printprompt();
 				memset(&buff[0], 0, sizeof(buff));

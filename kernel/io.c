@@ -39,7 +39,7 @@ void move_cursor(int row, int col)
 
 void printprompt(void)
 {
-    printf("\nusr@kemieBSD - $ ");
+    printf("\nBochsOne > ");
     move_cursor(get_terminal_row(), get_terminal_col());
 }
 

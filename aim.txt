@@ -1,0 +1,13 @@
+Type of System/Operating System (eg, Linux, Unix, BSD)
+     *  DCS (Distrobuted Computer System);
+     *  Name AmianDCS
+     Aim Of Operating System:
+         * Can be used in any system that needs a simple Operating System.
+         * e.g: If you were building a Calculator that needs an OS.
+         * I will be making a Desktop version of AmianDCS/AmianOS.
+
+Written In
+    * FreeStanding C
+    * Rust
+    * ASM
+    * Vala (For Graphics)
